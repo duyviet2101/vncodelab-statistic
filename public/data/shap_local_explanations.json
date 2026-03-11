@@ -1,0 +1,1900 @@
+[
+  {
+    "student_id": "0VAuwLoLIOhbyHjyxAXn4WKjPhJ2",
+    "room_id": "qUzgza",
+    "student_name": "NN ANH",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "0qJ0rMPGCdWyr6AKYAaVP8aNiyF2",
+    "room_id": "DoTlOk",
+    "student_name": "Tran Van Dao",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4985,
+    "p_disengaged": 0.5015,
+    "top_features": [
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.02582,
+        "feature_value": -0.51619
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.02361,
+        "feature_value": -0.32759
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02114,
+        "feature_value": -0.50093
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01688,
+        "feature_value": -0.48129
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.01139,
+        "feature_value": 0.21063
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "n_codesubmit_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      }
+    ],
+    "reasons": [
+      "events_per_session_early = -0.52 \u2192 increases Disengaged risk",
+      "mean_dur_early = -0.55 \u2192 increases Disengaged risk",
+      "total_dur_early_pct = -0.33 \u2192 increases Disengaged risk",
+      "n_total_events_early = -0.50 \u2192 increases Disengaged risk",
+      "total_dur_early = -0.53 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your events per session to improve engagement",
+      "Increase your mean dur to improve engagement",
+      "Increase your total dur pct to improve engagement"
+    ]
+  },
+  {
+    "student_id": "2uWjVS7QHybp0iWKPxdGMuz7wdS2",
+    "room_id": "qUzgza",
+    "student_name": "Vu Thi Linh",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "7Y5iQqs9OTaex9zytAY7JW6lbFj1",
+    "room_id": "5fR1uZ",
+    "student_name": "Vu Viet Hoang",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.5779,
+    "p_disengaged": 0.4221,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.07682,
+        "feature_value": 1.06588
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.06706,
+        "feature_value": 1.34042
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": 0.02297,
+        "feature_value": 0.52411
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01688,
+        "feature_value": -0.48129
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.01355,
+        "feature_value": 0.32114
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "n_codesubmit_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.00928,
+        "feature_value": 0.40758
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.0089,
+        "feature_value": 0.16466
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = 1.07 \u2192 increases High risk",
+      "events_per_session_early = 1.34 \u2192 increases High risk",
+      "mean_dur_early = 0.52 \u2192 increases High risk",
+      "active_frac_early = -0.48 \u2192 increases Disengaged risk",
+      "n_total_events_early = 0.32 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your active frac to improve engagement",
+      "Increase your code step ratio to improve engagement",
+      "Increase your n code to improve engagement"
+    ]
+  },
+  {
+    "student_id": "7sMFoe9GJmcH0EbzASk3tsPFloz1",
+    "room_id": "pU0xvo",
+    "student_name": "T\u1ed1ng M\u1ef9 An",
+    "predicted_tier": "high",
+    "true_tier": "disengaged",
+    "p_high": 0.529,
+    "p_disengaged": 0.471,
+    "top_features": [
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.07946,
+        "feature_value": 1.98905
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.04408,
+        "feature_value": -0.81547
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.04124,
+        "feature_value": 1.01401
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.02893,
+        "feature_value": -0.4014
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02192,
+        "feature_value": -0.50008
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.01851,
+        "feature_value": -0.47395
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01688,
+        "feature_value": -0.48129
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.01578,
+        "feature_value": -0.46354
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      }
+    ],
+    "reasons": [
+      "action_diversity_early = 1.99 \u2192 increases High risk",
+      "n_active_early_pct = -0.82 \u2192 increases Disengaged risk",
+      "n_sessions_early = 1.01 \u2192 increases High risk",
+      "attend_frac_early = 1.67 \u2192 increases High risk",
+      "total_dur_early_pct = -0.40 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your n active pct to improve engagement",
+      "Increase your total dur pct to improve engagement",
+      "Increase your mean dur to improve engagement"
+    ]
+  },
+  {
+    "student_id": "8Bx7i3OrSXNBxzkEouSQzmQytEY2",
+    "room_id": "pU0xvo",
+    "student_name": "Nguy\u1ec5n C\u00f4ng Ho\u00e0ng",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.671,
+    "p_disengaged": 0.329,
+    "top_features": [
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.14404,
+        "feature_value": 4.10663
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.11774,
+        "feature_value": 2.89453
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.09874,
+        "feature_value": 1.36997
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.07351,
+        "feature_value": 1.35985
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.0369,
+        "feature_value": 1.08382
+      },
+      {
+        "feature": "n_active_early",
+        "shap_value": 0.02721,
+        "feature_value": 1.38088
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.02156,
+        "feature_value": 0.51085
+      },
+      {
+        "feature": "n_quiz_early",
+        "shap_value": 0.02034,
+        "feature_value": 3.72241
+      }
+    ],
+    "reasons": [
+      "active_frac_early = 4.11 \u2192 increases High risk",
+      "n_sessions_early = 2.89 \u2192 increases High risk",
+      "total_dur_early_pct = 1.37 \u2192 increases High risk",
+      "n_active_early_pct = 1.36 \u2192 increases High risk",
+      "action_diversity_early = 1.03 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your mean dur to improve engagement",
+      "Increase your code step ratio to improve engagement",
+      "Increase your n code to improve engagement"
+    ]
+  },
+  {
+    "student_id": "Bgc6eYAiChO0gCggPXQim5U7Fzm2",
+    "room_id": "5fR1uZ",
+    "student_name": "Nguyen Minh Hieu",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.5507,
+    "p_disengaged": 0.4493,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.04278,
+        "feature_value": 0.59352
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.01704,
+        "feature_value": 0.34071
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01688,
+        "feature_value": -0.48129
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.01351,
+        "feature_value": -0.34588
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "n_codesubmit_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.00928,
+        "feature_value": 0.40758
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.0089,
+        "feature_value": 0.16466
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = 0.59 \u2192 increases High risk",
+      "action_diversity_early = 1.03 \u2192 increases High risk",
+      "events_per_session_early = 0.34 \u2192 increases High risk",
+      "active_frac_early = -0.48 \u2192 increases Disengaged risk",
+      "total_dur_early = -0.35 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your active frac to improve engagement",
+      "Increase your total dur to improve engagement",
+      "Increase your code step ratio to improve engagement"
+    ]
+  },
+  {
+    "student_id": "Boo8XX5MLLTwnVmFhxtlBpAv0ix1",
+    "room_id": "qUzgza",
+    "student_name": "Nguyen Tien Thanh",
+    "predicted_tier": "disengaged",
+    "true_tier": "disengaged",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "C0ytffSc8lgJ04Uot2A5Ms3opKV2",
+    "room_id": "pU0xvo",
+    "student_name": "D\u01b0\u01a1ng Ph\u01b0\u01a1ng Anh",
+    "predicted_tier": "disengaged",
+    "true_tier": "disengaged",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "DvQl6p4fKzPEwg3j0oJJTD7DCCB3",
+    "room_id": "ZsHmDc",
+    "student_name": "Do Thi Diu",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "KQv8ZuP2rFSZD8obsHOTWJ75rZp2",
+    "room_id": "pU0xvo",
+    "student_name": "Ph\u1ea1m Th\u1ecb Thu Trang",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.6265,
+    "p_disengaged": 0.3735,
+    "top_features": [
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.14523,
+        "feature_value": 4.14061
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.11774,
+        "feature_value": 2.89453
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.0369,
+        "feature_value": 1.08382
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.02692,
+        "feature_value": 0.49794
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02149,
+        "feature_value": -0.49026
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.01895,
+        "feature_value": 0.26286
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.01689,
+        "feature_value": -0.33767
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.01567,
+        "feature_value": -0.40116
+      }
+    ],
+    "reasons": [
+      "active_frac_early = 4.14 \u2192 increases High risk",
+      "n_sessions_early = 2.89 \u2192 increases High risk",
+      "action_diversity_early = 1.03 \u2192 increases High risk",
+      "attend_frac_early = 1.67 \u2192 increases High risk",
+      "n_sessions_early_pct = 1.08 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your mean dur to improve engagement",
+      "Increase your events per session to improve engagement",
+      "Increase your total dur to improve engagement"
+    ]
+  },
+  {
+    "student_id": "Ki86mquiTeglS8QUO5qvlO2NA1w2",
+    "room_id": "pU0xvo",
+    "student_name": "Nguy\u1ec5n B\u00e1 C\u01b0\u1eddng",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.6529,
+    "p_disengaged": 0.3471,
+    "top_features": [
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.15147,
+        "feature_value": 4.31838
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.11774,
+        "feature_value": 2.89453
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.0615,
+        "feature_value": 0.85332
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.05798,
+        "feature_value": 1.07255
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.0369,
+        "feature_value": 1.08382
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02061,
+        "feature_value": -0.47023
+      },
+      {
+        "feature": "n_active_early",
+        "shap_value": 0.02047,
+        "feature_value": 1.03901
+      },
+      {
+        "feature": "n_quiz_early",
+        "shap_value": 0.01612,
+        "feature_value": 2.94965
+      }
+    ],
+    "reasons": [
+      "active_frac_early = 4.32 \u2192 increases High risk",
+      "n_sessions_early = 2.89 \u2192 increases High risk",
+      "total_dur_early_pct = 0.85 \u2192 increases High risk",
+      "n_active_early_pct = 1.07 \u2192 increases High risk",
+      "action_diversity_early = 1.03 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your mean dur to improve engagement",
+      "Increase your total dur to improve engagement",
+      "Increase your code step ratio to improve engagement"
+    ]
+  },
+  {
+    "student_id": "ORcsZlNl5newTP90fC5gcmQ0en92",
+    "room_id": "qUzgza",
+    "student_name": "Nguyen Cong Chi Kien",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "PJ89IjpvGAQsNfYRT2epKZ0Flqj1",
+    "room_id": "KP2Mjm",
+    "student_name": "Nguyen Minh Quang",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.6263,
+    "p_disengaged": 0.3737,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.07974,
+        "feature_value": 1.10637
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.07949,
+        "feature_value": 1.95427
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.07761,
+        "feature_value": 1.83882
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.05753,
+        "feature_value": 1.15
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.05318,
+        "feature_value": 1.56177
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.0304,
+        "feature_value": 0.56243
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01688,
+        "feature_value": -0.48129
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = 1.11 \u2192 increases High risk",
+      "n_sessions_early = 1.95 \u2192 increases High risk",
+      "n_total_events_early = 1.84 \u2192 increases High risk",
+      "events_per_session_early = 1.15 \u2192 increases High risk",
+      "n_sessions_early_pct = 1.56 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your active frac to improve engagement",
+      "Increase your code step ratio to improve engagement",
+      "Increase your n code to improve engagement"
+    ]
+  },
+  {
+    "student_id": "VjoOu5ZXOmbUC7JlIwc9Yz1eS233",
+    "room_id": "qUzgza",
+    "student_name": "Le Minh Tuan",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.6625,
+    "p_disengaged": 0.3375,
+    "top_features": [
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.14565,
+        "feature_value": 2.91141
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.10964,
+        "feature_value": 2.59765
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.10406,
+        "feature_value": 1.44378
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.0659,
+        "feature_value": 1.21913
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.04341,
+        "feature_value": 1.275
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.04124,
+        "feature_value": 1.01401
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01323,
+        "feature_value": -0.3773
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.01197,
+        "feature_value": -0.3845
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.00928,
+        "feature_value": 0.40758
+      }
+    ],
+    "reasons": [
+      "events_per_session_early = 2.91 \u2192 increases High risk",
+      "n_total_events_early = 2.60 \u2192 increases High risk",
+      "total_dur_early_pct = 1.44 \u2192 increases High risk",
+      "n_active_early_pct = 1.22 \u2192 increases High risk",
+      "n_sessions_early_pct = 1.27 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your active frac to improve engagement",
+      "Increase your code step ratio to improve engagement",
+      "Increase your n code to improve engagement"
+    ]
+  },
+  {
+    "student_id": "Vodydw0UdzYJl4buz4IRQ5LBHce2",
+    "room_id": "pU0xvo",
+    "student_name": "L\u1ea1i Minh Nam",
+    "predicted_tier": "disengaged",
+    "true_tier": "disengaged",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "XelKByddBGas06D5BGhaLox16yQ2",
+    "room_id": "DoTlOk",
+    "student_name": "Dang Ngoc Viet Hung",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "Y8k9WCJkkkek3Ht6BAjg3b3uR8y2",
+    "room_id": "pU0xvo",
+    "student_name": "V\u0169 Ng\u1ecdc \u0110\u1ee9c",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.6813,
+    "p_disengaged": 0.3187,
+    "top_features": [
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.15681,
+        "feature_value": 4.47075
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.11774,
+        "feature_value": 2.89453
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.09126,
+        "feature_value": 1.6882
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.08278,
+        "feature_value": 1.14855
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "n_active_early",
+        "shap_value": 0.03844,
+        "feature_value": 1.95066
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.0369,
+        "feature_value": 1.08382
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.03224,
+        "feature_value": 0.7638
+      },
+      {
+        "feature": "n_quiz_early",
+        "shap_value": 0.02738,
+        "feature_value": 5.01036
+      }
+    ],
+    "reasons": [
+      "active_frac_early = 4.47 \u2192 increases High risk",
+      "n_sessions_early = 2.89 \u2192 increases High risk",
+      "n_active_early_pct = 1.69 \u2192 increases High risk",
+      "total_dur_early_pct = 1.15 \u2192 increases High risk",
+      "action_diversity_early = 1.03 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your mean dur to improve engagement",
+      "Increase your code step ratio to improve engagement",
+      "Increase your total dur to improve engagement"
+    ]
+  },
+  {
+    "student_id": "ZOBL4vmnUVVnTVvmDteKATeV9lz1",
+    "room_id": "7WWd3Y",
+    "student_name": "Nguyen Ngoc Bao Nhi",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.738,
+    "p_disengaged": 0.262,
+    "top_features": [
+      {
+        "feature": "mean_dur_early",
+        "shap_value": 0.10711,
+        "feature_value": 2.44399
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": 0.09947,
+        "feature_value": 2.54714
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.08849,
+        "feature_value": 1.76887
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.07431,
+        "feature_value": 2.11853
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": 0.06814,
+        "feature_value": 2.56665
+      },
+      {
+        "feature": "n_codesubmit_early",
+        "shap_value": 0.06814,
+        "feature_value": 2.56665
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.06694,
+        "feature_value": 1.58587
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": 0.05697,
+        "feature_value": 1.83055
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.04393,
+        "feature_value": 0.8126
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.04124,
+        "feature_value": 1.01401
+      }
+    ],
+    "reasons": [
+      "mean_dur_early = 2.44 \u2192 increases High risk",
+      "total_dur_early = 2.55 \u2192 increases High risk",
+      "events_per_session_early = 1.77 \u2192 increases High risk",
+      "active_frac_early = 2.12 \u2192 increases High risk",
+      "n_code_early = 2.57 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your n help to improve engagement",
+      "Increase your help rate to improve engagement",
+      "Increase your n quiz to improve engagement"
+    ]
+  },
+  {
+    "student_id": "goiWWULDHVU51epwK7eBDxHbVAf2",
+    "room_id": "qUzgza",
+    "student_name": "Ngo Quynh Anh",
+    "predicted_tier": "high",
+    "true_tier": "disengaged",
+    "p_high": 0.5204,
+    "p_disengaged": 0.4796,
+    "top_features": [
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.03133,
+        "feature_value": 0.62634
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02328,
+        "feature_value": -0.53116
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02016,
+        "feature_value": -0.5162
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.01753,
+        "feature_value": -0.24324
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": -0.01688,
+        "feature_value": -0.48129
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "n_codesubmit_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.00928,
+        "feature_value": 0.40758
+      },
+      {
+        "feature": "n_active_early",
+        "shap_value": -0.00647,
+        "feature_value": -0.32846
+      }
+    ],
+    "reasons": [
+      "events_per_session_early = 0.63 \u2192 increases High risk",
+      "mean_dur_early = -0.53 \u2192 increases Disengaged risk",
+      "total_dur_early = -0.52 \u2192 increases Disengaged risk",
+      "total_dur_early_pct = -0.24 \u2192 increases Disengaged risk",
+      "active_frac_early = -0.48 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your mean dur to improve engagement",
+      "Increase your total dur to improve engagement",
+      "Increase your total dur pct to improve engagement"
+    ]
+  },
+  {
+    "student_id": "in9VLUb9TgdSrBKdR9dBzBQYwWS2",
+    "room_id": "KP2Mjm",
+    "student_name": "yong naykhouch",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "oMkAjB6pAOThaXUQ61rUFoUpoh13",
+    "room_id": "7WWd3Y",
+    "student_name": "Pham Thi Lien",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.792,
+    "p_disengaged": 0.208,
+    "top_features": [
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": 0.14014,
+        "feature_value": 4.50288
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": 0.12693,
+        "feature_value": 2.89621
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": 0.11759,
+        "feature_value": 3.01119
+      },
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.10818,
+        "feature_value": 3.08418
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": 0.10066,
+        "feature_value": 3.79164
+      },
+      {
+        "feature": "n_codesubmit_early",
+        "shap_value": 0.10066,
+        "feature_value": 3.79164
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.09206,
+        "feature_value": 1.84028
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.07098,
+        "feature_value": 1.31295
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.06961,
+        "feature_value": 1.64911
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.06353,
+        "feature_value": 0.88144
+      }
+    ],
+    "reasons": [
+      "code_step_ratio_early = 4.50 \u2192 increases High risk",
+      "mean_dur_early = 2.90 \u2192 increases High risk",
+      "total_dur_early = 3.01 \u2192 increases High risk",
+      "active_frac_early = 3.08 \u2192 increases High risk",
+      "n_code_early = 3.79 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your n help to improve engagement",
+      "Increase your help rate to improve engagement",
+      "Increase your n quiz to improve engagement"
+    ]
+  },
+  {
+    "student_id": "t9u1PoM7ZCOZaQs0Fl8YfS93Kf02",
+    "room_id": "KP2Mjm",
+    "student_name": "Nguyen Quoc Thai",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.6849,
+    "p_disengaged": 0.3151,
+    "top_features": [
+      {
+        "feature": "total_dur_early",
+        "shap_value": 0.131,
+        "feature_value": 3.35445
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": 0.10406,
+        "feature_value": 1.44378
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": 0.08634,
+        "feature_value": 1.97003
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.07949,
+        "feature_value": 1.95427
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.07946,
+        "feature_value": 1.98905
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": 0.05318,
+        "feature_value": 1.56177
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": 0.04558,
+        "feature_value": 1.07998
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.03797,
+        "feature_value": 1.66739
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": 0.0304,
+        "feature_value": 0.56243
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": 0.02895,
+        "feature_value": 0.57873
+      }
+    ],
+    "reasons": [
+      "total_dur_early = 3.35 \u2192 increases High risk",
+      "total_dur_early_pct = 1.44 \u2192 increases High risk",
+      "mean_dur_early = 1.97 \u2192 increases High risk",
+      "n_sessions_early = 1.95 \u2192 increases High risk",
+      "action_diversity_early = 1.99 \u2192 increases High risk"
+    ],
+    "suggestions": [
+      "Increase your active frac to improve engagement",
+      "Increase your code step ratio to improve engagement",
+      "Increase your n code to improve engagement"
+    ]
+  },
+  {
+    "student_id": "wnAlggy0txWDJeAF5zGY7Xj32jy1",
+    "room_id": "KP2Mjm",
+    "student_name": "Dang Minh Thu",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "wrAkvsHlXmNTOQxdKvlMdpDoHME2",
+    "room_id": "KP2Mjm",
+    "student_name": "Luu Minh. Tuan",
+    "predicted_tier": "disengaged",
+    "true_tier": "high",
+    "p_high": 0.4403,
+    "p_disengaged": 0.5597,
+    "top_features": [
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.06617,
+        "feature_value": -0.91805
+      },
+      {
+        "feature": "n_active_early_pct",
+        "shap_value": -0.05074,
+        "feature_value": -0.9386
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": -0.03525,
+        "feature_value": -0.86652
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": -0.03523,
+        "feature_value": -0.88194
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.03297,
+        "feature_value": -0.65901
+      },
+      {
+        "feature": "n_sessions_early_pct",
+        "shap_value": -0.03145,
+        "feature_value": -0.92356
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02416,
+        "feature_value": -0.55137
+      },
+      {
+        "feature": "n_total_events_early",
+        "shap_value": -0.02381,
+        "feature_value": -0.56417
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.02056,
+        "feature_value": -0.52657
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": -0.01941,
+        "feature_value": -0.85222
+      }
+    ],
+    "reasons": [
+      "total_dur_early_pct = -0.92 \u2192 increases Disengaged risk",
+      "n_active_early_pct = -0.94 \u2192 increases Disengaged risk",
+      "n_sessions_early = -0.87 \u2192 increases Disengaged risk",
+      "action_diversity_early = -0.88 \u2192 increases Disengaged risk",
+      "events_per_session_early = -0.66 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your total dur pct to improve engagement",
+      "Increase your n active pct to improve engagement",
+      "Increase your n sessions to improve engagement"
+    ]
+  },
+  {
+    "student_id": "zwmsYOhlVVW5Piq320YVwu6QPrA2",
+    "room_id": "pU0xvo",
+    "student_name": "Tr\u1ea7n V\u0103n \u0110\u1ea1o",
+    "predicted_tier": "high",
+    "true_tier": "high",
+    "p_high": 0.5685,
+    "p_disengaged": 0.4315,
+    "top_features": [
+      {
+        "feature": "active_frac_early",
+        "shap_value": 0.08733,
+        "feature_value": 2.48993
+      },
+      {
+        "feature": "n_sessions_early",
+        "shap_value": 0.07949,
+        "feature_value": 1.95427
+      },
+      {
+        "feature": "action_diversity_early",
+        "shap_value": 0.04123,
+        "feature_value": 1.03206
+      },
+      {
+        "feature": "attend_frac_early",
+        "shap_value": 0.02363,
+        "feature_value": 1.03749
+      },
+      {
+        "feature": "mean_dur_early",
+        "shap_value": -0.02203,
+        "feature_value": -0.50269
+      },
+      {
+        "feature": "total_dur_early_pct",
+        "shap_value": -0.01829,
+        "feature_value": -0.25379
+      },
+      {
+        "feature": "total_dur_early",
+        "shap_value": -0.01764,
+        "feature_value": -0.45165
+      },
+      {
+        "feature": "events_per_session_early",
+        "shap_value": -0.0163,
+        "feature_value": -0.32577
+      },
+      {
+        "feature": "code_step_ratio_early",
+        "shap_value": -0.0134,
+        "feature_value": -0.43064
+      },
+      {
+        "feature": "n_code_early",
+        "shap_value": -0.01084,
+        "feature_value": -0.40833
+      }
+    ],
+    "reasons": [
+      "active_frac_early = 2.49 \u2192 increases High risk",
+      "n_sessions_early = 1.95 \u2192 increases High risk",
+      "action_diversity_early = 1.03 \u2192 increases High risk",
+      "attend_frac_early = 1.04 \u2192 increases High risk",
+      "mean_dur_early = -0.50 \u2192 increases Disengaged risk"
+    ],
+    "suggestions": [
+      "Increase your mean dur to improve engagement",
+      "Increase your total dur pct to improve engagement",
+      "Increase your total dur to improve engagement"
+    ]
+  }
+]

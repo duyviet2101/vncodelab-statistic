@@ -1,0 +1,78 @@
+[
+  {
+    "feature": "total_dur_early_pct",
+    "mean_abs_shap": 0.067945
+  },
+  {
+    "feature": "n_active_early_pct",
+    "mean_abs_shap": 0.050063
+  },
+  {
+    "feature": "events_per_session_early",
+    "mean_abs_shap": 0.039646
+  },
+  {
+    "feature": "n_sessions_early",
+    "mean_abs_shap": 0.034555
+  },
+  {
+    "feature": "action_diversity_early",
+    "mean_abs_shap": 0.034544
+  },
+  {
+    "feature": "mean_dur_early",
+    "mean_abs_shap": 0.0338
+  },
+  {
+    "feature": "n_sessions_early_pct",
+    "mean_abs_shap": 0.03127
+  },
+  {
+    "feature": "n_total_events_early",
+    "mean_abs_shap": 0.029318
+  },
+  {
+    "feature": "total_dur_early",
+    "mean_abs_shap": 0.028475
+  },
+  {
+    "feature": "active_frac_early",
+    "mean_abs_shap": 0.025818
+  },
+  {
+    "feature": "code_step_ratio_early",
+    "mean_abs_shap": 0.02095
+  },
+  {
+    "feature": "attend_frac_early",
+    "mean_abs_shap": 0.020031
+  },
+  {
+    "feature": "n_codesubmit_early",
+    "mean_abs_shap": 0.016944
+  },
+  {
+    "feature": "n_code_early",
+    "mean_abs_shap": 0.016944
+  },
+  {
+    "feature": "n_active_early",
+    "mean_abs_shap": 0.01022
+  },
+  {
+    "feature": "help_rate_early",
+    "mean_abs_shap": 0.004164
+  },
+  {
+    "feature": "n_help_early",
+    "mean_abs_shap": 0.004164
+  },
+  {
+    "feature": "n_quiz_early",
+    "mean_abs_shap": 0.001515
+  },
+  {
+    "feature": "n_raisehand_early",
+    "mean_abs_shap": 0.0
+  }
+]

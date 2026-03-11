@@ -1,0 +1,50 @@
+{
+  "LogReg": {
+    "matrix": [
+      [
+        3,
+        2
+      ],
+      [
+        9,
+        12
+      ]
+    ],
+    "labels": [
+      "disengaged",
+      "high"
+    ]
+  },
+  "RF": {
+    "matrix": [
+      [
+        3,
+        2
+      ],
+      [
+        8,
+        13
+      ]
+    ],
+    "labels": [
+      "disengaged",
+      "high"
+    ]
+  },
+  "XGB": {
+    "matrix": [
+      [
+        5,
+        0
+      ],
+      [
+        21,
+        0
+      ]
+    ],
+    "labels": [
+      "disengaged",
+      "high"
+    ]
+  }
+}

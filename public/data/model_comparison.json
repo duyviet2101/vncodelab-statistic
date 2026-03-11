@@ -1,0 +1,59 @@
+[
+  {
+    "model": "LogReg",
+    "accuracy": 0.5769,
+    "macro_f1": 0.5193,
+    "auc": 0.7143,
+    "precision_macro": 0.5536,
+    "recall_macro": 0.5857,
+    "precision_disengaged": 0.25,
+    "recall_disengaged": 0.6,
+    "precision_high": 0.8571,
+    "recall_high": 0.5714,
+    "best_params": {
+      "C": 0.01
+    },
+    "train_size": 51,
+    "test_size": 26
+  },
+  {
+    "model": "RF",
+    "accuracy": 0.6154,
+    "macro_f1": 0.5486,
+    "auc": 0.7143,
+    "precision_macro": 0.5697,
+    "recall_macro": 0.6095,
+    "precision_disengaged": 0.2727,
+    "recall_disengaged": 0.6,
+    "precision_high": 0.8667,
+    "recall_high": 0.619,
+    "best_params": {
+      "max_depth": 6,
+      "min_samples_leaf": 3,
+      "n_estimators": 200
+    },
+    "train_size": 51,
+    "test_size": 26
+  },
+  {
+    "model": "XGB",
+    "accuracy": 0.1923,
+    "macro_f1": 0.1613,
+    "auc": 0.5,
+    "precision_macro": 0.0962,
+    "recall_macro": 0.5,
+    "precision_disengaged": 0.1923,
+    "recall_disengaged": 1.0,
+    "precision_high": 0.0,
+    "recall_high": 0.0,
+    "best_params": {
+      "colsample_bytree": 0.8,
+      "learning_rate": 0.02,
+      "max_depth": 4,
+      "n_estimators": 200,
+      "subsample": 0.8
+    },
+    "train_size": 51,
+    "test_size": 26
+  }
+]

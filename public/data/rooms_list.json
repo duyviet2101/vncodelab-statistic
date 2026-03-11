@@ -1,0 +1,501 @@
+[
+  {
+    "room_id": "2UfirR",
+    "n_students": 56,
+    "n_sessions_avg": 9.4,
+    "tier_counts": {
+      "mid": 52,
+      "high": 4
+    }
+  },
+  {
+    "room_id": "2efeeH",
+    "n_students": 12,
+    "n_sessions_avg": 5.2,
+    "tier_counts": {
+      "mid": 10,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "2wpTye",
+    "n_students": 21,
+    "n_sessions_avg": 10.0,
+    "tier_counts": {
+      "mid": 19,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "414QeC",
+    "n_students": 22,
+    "n_sessions_avg": 7.6,
+    "tier_counts": {
+      "mid": 21,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "41UYEv",
+    "n_students": 13,
+    "n_sessions_avg": 8.5,
+    "tier_counts": {
+      "mid": 12,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "45XzqN",
+    "n_students": 12,
+    "n_sessions_avg": 5.9,
+    "tier_counts": {
+      "mid": 9,
+      "high": 3
+    }
+  },
+  {
+    "room_id": "49Dfs4",
+    "n_students": 16,
+    "n_sessions_avg": 5.9,
+    "tier_counts": {
+      "mid": 14,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "4YtuXh",
+    "n_students": 13,
+    "n_sessions_avg": 9.6,
+    "tier_counts": {
+      "mid": 13
+    }
+  },
+  {
+    "room_id": "4gaVNw",
+    "n_students": 26,
+    "n_sessions_avg": 6.7,
+    "tier_counts": {
+      "mid": 25,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "5fR1uZ",
+    "n_students": 26,
+    "n_sessions_avg": 6.4,
+    "tier_counts": {
+      "mid": 24,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "6FYLTw",
+    "n_students": 17,
+    "n_sessions_avg": 9.0,
+    "tier_counts": {
+      "mid": 17
+    }
+  },
+  {
+    "room_id": "6Pwgss",
+    "n_students": 23,
+    "n_sessions_avg": 10.4,
+    "tier_counts": {
+      "mid": 23
+    }
+  },
+  {
+    "room_id": "7Igy2h",
+    "n_students": 13,
+    "n_sessions_avg": 5.2,
+    "tier_counts": {
+      "mid": 13
+    }
+  },
+  {
+    "room_id": "7WWd3Y",
+    "n_students": 21,
+    "n_sessions_avg": 6.5,
+    "tier_counts": {
+      "mid": 19,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "8QBzCp",
+    "n_students": 25,
+    "n_sessions_avg": 12.6,
+    "tier_counts": {
+      "mid": 23,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "A1Fbqn",
+    "n_students": 11,
+    "n_sessions_avg": 5.4,
+    "tier_counts": {
+      "mid": 11
+    }
+  },
+  {
+    "room_id": "A9Yic2",
+    "n_students": 30,
+    "n_sessions_avg": 9.1,
+    "tier_counts": {
+      "mid": 30
+    }
+  },
+  {
+    "room_id": "AV77R9",
+    "n_students": 20,
+    "n_sessions_avg": 7.1,
+    "tier_counts": {
+      "mid": 15,
+      "high": 5
+    }
+  },
+  {
+    "room_id": "AubkS5",
+    "n_students": 22,
+    "n_sessions_avg": 5.3,
+    "tier_counts": {
+      "mid": 21,
+      "disengaged": 1
+    }
+  },
+  {
+    "room_id": "BfXi2E",
+    "n_students": 12,
+    "n_sessions_avg": 5.7,
+    "tier_counts": {
+      "mid": 12
+    }
+  },
+  {
+    "room_id": "Cg9m2X",
+    "n_students": 14,
+    "n_sessions_avg": 9.6,
+    "tier_counts": {
+      "mid": 13,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "CjdMTD",
+    "n_students": 15,
+    "n_sessions_avg": 9.7,
+    "tier_counts": {
+      "mid": 13,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "DoTlOk",
+    "n_students": 22,
+    "n_sessions_avg": 10.6,
+    "tier_counts": {
+      "mid": 20,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "IgUGHH",
+    "n_students": 26,
+    "n_sessions_avg": 9.8,
+    "tier_counts": {
+      "mid": 26
+    }
+  },
+  {
+    "room_id": "JEkPXU",
+    "n_students": 22,
+    "n_sessions_avg": 6.7,
+    "tier_counts": {
+      "mid": 20,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "JxKtNV",
+    "n_students": 10,
+    "n_sessions_avg": 7.3,
+    "tier_counts": {
+      "mid": 10
+    }
+  },
+  {
+    "room_id": "KHDL_CQ_225_08",
+    "n_students": 12,
+    "n_sessions_avg": 4.2,
+    "tier_counts": {
+      "mid": 12
+    }
+  },
+  {
+    "room_id": "KP2Mjm",
+    "n_students": 18,
+    "n_sessions_avg": 7.3,
+    "tier_counts": {
+      "mid": 13,
+      "high": 5
+    }
+  },
+  {
+    "room_id": "LASjJe",
+    "n_students": 26,
+    "n_sessions_avg": 11.1,
+    "tier_counts": {
+      "mid": 26
+    }
+  },
+  {
+    "room_id": "Ldovzo",
+    "n_students": 16,
+    "n_sessions_avg": 8.4,
+    "tier_counts": {
+      "mid": 15,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "Le2MmM",
+    "n_students": 22,
+    "n_sessions_avg": 9.2,
+    "tier_counts": {
+      "mid": 22
+    }
+  },
+  {
+    "room_id": "Mp4tdy",
+    "n_students": 51,
+    "n_sessions_avg": 10.2,
+    "tier_counts": {
+      "mid": 51
+    }
+  },
+  {
+    "room_id": "NFzXSI",
+    "n_students": 13,
+    "n_sessions_avg": 6.1,
+    "tier_counts": {
+      "mid": 12,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "PZ35JQ",
+    "n_students": 20,
+    "n_sessions_avg": 10.1,
+    "tier_counts": {
+      "mid": 17,
+      "disengaged": 2,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "QLGK35",
+    "n_students": 11,
+    "n_sessions_avg": 7.5,
+    "tier_counts": {
+      "mid": 10,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "RRG3Jh",
+    "n_students": 28,
+    "n_sessions_avg": 8.1,
+    "tier_counts": {
+      "mid": 28
+    }
+  },
+  {
+    "room_id": "TYpykB",
+    "n_students": 27,
+    "n_sessions_avg": 7.6,
+    "tier_counts": {
+      "mid": 27
+    }
+  },
+  {
+    "room_id": "U3sqcq",
+    "n_students": 15,
+    "n_sessions_avg": 9.9,
+    "tier_counts": {
+      "mid": 12,
+      "high": 3
+    }
+  },
+  {
+    "room_id": "ZR5GJ6",
+    "n_students": 23,
+    "n_sessions_avg": 5.0,
+    "tier_counts": {
+      "mid": 23
+    }
+  },
+  {
+    "room_id": "ZrIavJ",
+    "n_students": 17,
+    "n_sessions_avg": 10.3,
+    "tier_counts": {
+      "mid": 16,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "ZsHmDc",
+    "n_students": 52,
+    "n_sessions_avg": 6.9,
+    "tier_counts": {
+      "mid": 51,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "cHHaLE",
+    "n_students": 28,
+    "n_sessions_avg": 8.2,
+    "tier_counts": {
+      "mid": 27,
+      "high": 1
+    }
+  },
+  {
+    "room_id": "fVx47e",
+    "n_students": 39,
+    "n_sessions_avg": 8.9,
+    "tier_counts": {
+      "mid": 36,
+      "high": 3
+    }
+  },
+  {
+    "room_id": "fd9s28",
+    "n_students": 17,
+    "n_sessions_avg": 9.9,
+    "tier_counts": {
+      "mid": 17
+    }
+  },
+  {
+    "room_id": "iWIr3z",
+    "n_students": 34,
+    "n_sessions_avg": 9.2,
+    "tier_counts": {
+      "mid": 34
+    }
+  },
+  {
+    "room_id": "jOkz1q",
+    "n_students": 38,
+    "n_sessions_avg": 8.7,
+    "tier_counts": {
+      "mid": 38
+    }
+  },
+  {
+    "room_id": "kf2NmM",
+    "n_students": 39,
+    "n_sessions_avg": 8.3,
+    "tier_counts": {
+      "mid": 35,
+      "high": 4
+    }
+  },
+  {
+    "room_id": "myeJCp",
+    "n_students": 29,
+    "n_sessions_avg": 5.0,
+    "tier_counts": {
+      "mid": 27,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "oNwkHP",
+    "n_students": 13,
+    "n_sessions_avg": 11.0,
+    "tier_counts": {
+      "mid": 13
+    }
+  },
+  {
+    "room_id": "pU0xvo",
+    "n_students": 37,
+    "n_sessions_avg": 12.2,
+    "tier_counts": {
+      "mid": 29,
+      "high": 5,
+      "disengaged": 3
+    }
+  },
+  {
+    "room_id": "pnEnLc",
+    "n_students": 20,
+    "n_sessions_avg": 8.9,
+    "tier_counts": {
+      "mid": 20
+    }
+  },
+  {
+    "room_id": "qUzgza",
+    "n_students": 34,
+    "n_sessions_avg": 9.4,
+    "tier_counts": {
+      "mid": 28,
+      "high": 4,
+      "disengaged": 2
+    }
+  },
+  {
+    "room_id": "tQaXjT",
+    "n_students": 16,
+    "n_sessions_avg": 8.2,
+    "tier_counts": {
+      "mid": 16
+    }
+  },
+  {
+    "room_id": "uDhLQT",
+    "n_students": 68,
+    "n_sessions_avg": 9.2,
+    "tier_counts": {
+      "mid": 68
+    }
+  },
+  {
+    "room_id": "uhKG4o",
+    "n_students": 46,
+    "n_sessions_avg": 11.3,
+    "tier_counts": {
+      "mid": 46
+    }
+  },
+  {
+    "room_id": "umeeIo",
+    "n_students": 22,
+    "n_sessions_avg": 7.7,
+    "tier_counts": {
+      "mid": 22
+    }
+  },
+  {
+    "room_id": "viUAMw",
+    "n_students": 32,
+    "n_sessions_avg": 10.8,
+    "tier_counts": {
+      "mid": 30,
+      "high": 2
+    }
+  },
+  {
+    "room_id": "yw6EcK",
+    "n_students": 41,
+    "n_sessions_avg": 10.3,
+    "tier_counts": {
+      "mid": 41
+    }
+  }
+]
