@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Slider } from "@/components/ui/slider"
 import { Skeleton } from "@/components/ui/skeleton"
-import { TierBadge } from "@/components/dashboard/tier-badge"
+import { TierBadge, type TierLevel } from "@/components/dashboard/tier-badge"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,10 +34,12 @@ import {
   ResponsiveContainer,
 } from "recharts"
 
-function capitalize(s: string): "High" | "Mid" | "Disengaged" {
-  if (s === "disengaged") return "Disengaged"
-  if (s === "high") return "High"
-  return "Mid"
+function normalizeTierLabel(s: string): TierLevel {
+  const key = s.toLowerCase()
+  if (key === "disengaged") return "Disengaged"
+  if (key === "low") return "Low"
+  if (key === "moderate" || key === "mid") return "Moderate"
+  return "High"
 }
 
 function riskColor(p: number): string {
@@ -387,12 +389,12 @@ export function AtRiskStudents() {
                       {student.room_id}
                     </td>
                     <td className="py-3 px-4">
-                      <TierBadge tier={capitalize(student.predicted_tier)} />
+                      <TierBadge tier={normalizeTierLabel(student.predicted_tier)} />
                     </td>
                     <td className="py-3 px-4">
                       {student.label_full ? (
                         <TierBadge
-                          tier={capitalize(student.label_full)}
+                          tier={normalizeTierLabel(student.label_full)}
                           size="sm"
                         />
                       ) : (

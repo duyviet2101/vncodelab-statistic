@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react"
 import { Card } from "@/components/ui/card"
 import { KpiCard } from "@/components/dashboard/kpi-card"
-import { TierBadge } from "@/components/dashboard/tier-badge"
+import { TierBadge, type TierLevel } from "@/components/dashboard/tier-badge"
 import { Skeleton } from "@/components/ui/skeleton"
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import { Users, Home, Target, BrainCircuit } from "lucide-react"
@@ -20,21 +20,24 @@ import {
 import { fetchOverview, fetchSessionActivity, fetchStudents } from "@/lib/fetch-data"
 import type { OverviewData, SessionActivityByTier, StudentRecord } from "@/lib/types"
 
-const TIER_COLORS = {
+const TIER_COLORS: Record<string, string> = {
   high: "oklch(0.7 0.18 145)",
-  mid: "oklch(0.8 0.16 85)",
+  moderate: "oklch(0.8 0.16 85)",
+  low: "oklch(0.78 0.12 70)",
   disengaged: "oklch(0.65 0.18 25)",
-} as const
+}
 
-const TIER_LABEL: Record<string, "High" | "Mid" | "Disengaged"> = {
+const TIER_LABEL: Record<string, TierLevel> = {
   high: "High",
-  mid: "Mid",
+  moderate: "Moderate",
+  low: "Low",
   disengaged: "Disengaged",
 }
 
 const TIER_ROW_BG: Record<string, string> = {
   high: "bg-tier-high-bg/20",
-  mid: "bg-tier-mid-bg/20",
+  moderate: "bg-tier-moderate-bg/20",
+  low: "bg-tier-low-bg/20",
   disengaged: "bg-tier-disengaged-bg/20",
 }
 
@@ -44,12 +47,8 @@ type ActivityMetric = "avg_events" | "avg_dur_min"
 
 interface ActivityRow {
   session: string
-  high: number
-  mid: number
-  disengaged: number
-  n_high: number
-  n_mid: number
-  n_disengaged: number
+  // dynamic keys: tier -> value, `n_${tier}` -> n_students
+  [key: string]: string | number
 }
 
 function buildActivityChart(
@@ -58,25 +57,21 @@ function buildActivityChart(
   maxSessions = 10,
 ): ActivityRow[] {
   const merged: Record<number, ActivityRow> = {}
+  const tiers = Object.keys(raw)
 
-  for (const tier of ["high", "mid", "disengaged"] as const) {
-    for (const entry of raw[tier]) {
+  for (const tier of tiers) {
+    const series = raw[tier]
+    if (!Array.isArray(series)) continue
+    for (const entry of series) {
       if (entry.session_idx < 1 || entry.session_idx > maxSessions) continue
       if (!merged[entry.session_idx]) {
         merged[entry.session_idx] = {
           session: `S${entry.session_idx}`,
-          high: 0,
-          mid: 0,
-          disengaged: 0,
-          n_high: 0,
-          n_mid: 0,
-          n_disengaged: 0,
         }
       }
       const value = metric === "avg_dur_min" ? entry.avg_dur_min : entry.avg_events
       merged[entry.session_idx][tier] = Math.round(value * 100) / 100
-      const nKey = `n_${tier}` as "n_high" | "n_mid" | "n_disengaged"
-      merged[entry.session_idx][nKey] = entry.n_students
+      merged[entry.session_idx][`n_${tier}`] = entry.n_students
     }
   }
 
@@ -215,7 +210,9 @@ function StudentTable({
           <tbody>
             {paged.map((s) => {
               const tierKey = s.predicted_tier.toLowerCase()
-              const tierDisplay = TIER_LABEL[tierKey] ?? "Mid"
+              const tierDisplay =
+                TIER_LABEL[tierKey] ??
+                ((tierKey.charAt(0).toUpperCase() + tierKey.slice(1)) as TierLevel)
               return (
                 <tr
                   key={`${s.student_id}-${s.room_id}`}
@@ -286,21 +283,30 @@ export function ClassEngagement() {
     [students],
   )
 
-  const totalEnrollments = overview
-    ? overview.tier_counts.high + overview.tier_counts.mid + overview.tier_counts.disengaged
-    : 0
+  const tierCounts = overview?.tier_counts ?? {}
+  const tierOrder =
+    (Array.isArray(overview?.config?.TIER_NAMES)
+      ? (overview?.config?.TIER_NAMES as string[])
+      : ["disengaged", "low", "moderate", "high"]) ?? []
 
-  const tierData = overview
-    ? ([
-        { key: "high", label: "High", count: overview.tier_counts.high },
-        { key: "mid", label: "Mid", count: overview.tier_counts.mid },
-        { key: "disengaged", label: "Disengaged", count: overview.tier_counts.disengaged },
-      ] as const).map((t) => ({
-        ...t,
-        pct: ((t.count / totalEnrollments) * 100).toFixed(1),
-        color: TIER_COLORS[t.key],
-      }))
-    : []
+  const totalEnrollments =
+    Object.values(tierCounts).reduce((sum, v) => sum + (v ?? 0), 0) ?? 0
+
+  const tierData =
+    overview && totalEnrollments > 0
+      ? tierOrder.map((key) => {
+          const count = (tierCounts as Record<string, number | undefined>)[key] ?? 0
+          return {
+            key,
+            label:
+              TIER_LABEL[key] ??
+              ((key.charAt(0).toUpperCase() + key.slice(1)) as TierLevel),
+            count,
+            pct: ((count / totalEnrollments) * 100).toFixed(1),
+            color: TIER_COLORS[key] ?? "oklch(0.65 0.15 250)",
+          }
+        })
+      : []
 
   if (loading) {
     return (
@@ -357,7 +363,9 @@ export function ClassEngagement() {
         <KpiCard
           title="High Engagement"
           value={`${tierData.find((t) => t.key === "high")?.pct ?? "0"}%`}
-          subtitle={`${overview?.tier_counts.high ?? 0} of ${totalEnrollments.toLocaleString()} enrollments`}
+          subtitle={`${
+            (tierCounts as Record<string, number | undefined>).high ?? 0
+          } of ${totalEnrollments.toLocaleString()} enrollments`}
           icon={Target}
         />
       </div>
@@ -458,31 +466,18 @@ export function ClassEngagement() {
                 />
                 <Tooltip content={<ActivityTooltip metricLabel={metricLabel} />} />
                 <Legend />
-                <Line
-                  type="monotone"
-                  dataKey="high"
-                  name="High"
-                  stroke={TIER_COLORS.high}
-                  strokeWidth={2}
-                  dot={{ fill: TIER_COLORS.high }}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="mid"
-                  name="Mid"
-                  stroke={TIER_COLORS.mid}
-                  strokeWidth={2}
-                  dot={{ fill: TIER_COLORS.mid }}
-                />
-                <Line
-                  type="monotone"
-                  dataKey="disengaged"
-                  name="Disengaged"
-                  stroke={TIER_COLORS.disengaged}
-                  strokeWidth={2}
-                  strokeDasharray="5 3"
-                  dot={{ fill: TIER_COLORS.disengaged }}
-                />
+                {tierOrder.map((tierKey) => (
+                  <Line
+                    key={tierKey}
+                    type="monotone"
+                    dataKey={tierKey}
+                    name={TIER_LABEL[tierKey] ?? tierKey}
+                    stroke={TIER_COLORS[tierKey] ?? "oklch(0.65 0.15 250)"}
+                    strokeWidth={2}
+                    dot={{ fill: TIER_COLORS[tierKey] ?? "oklch(0.65 0.15 250)" }}
+                    strokeDasharray={tierKey === "disengaged" ? "5 3" : undefined}
+                  />
+                ))}
               </LineChart>
             </ResponsiveContainer>
           </div>

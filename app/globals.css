@@ -42,10 +42,12 @@
   
   /* Custom tier colors */
   --tier-high: oklch(0.7 0.18 145);
-  --tier-mid: oklch(0.8 0.16 85);
+  --tier-moderate: oklch(0.8 0.16 85);
+  --tier-low: oklch(0.78 0.12 70);
   --tier-disengaged: oklch(0.65 0.18 25);
   --tier-high-bg: oklch(0.92 0.06 145);
-  --tier-mid-bg: oklch(0.94 0.06 85);
+  --tier-moderate-bg: oklch(0.94 0.06 85);
+  --tier-low-bg: oklch(0.94 0.05 70);
   --tier-disengaged-bg: oklch(0.92 0.06 25);
 }
 
@@ -86,10 +88,12 @@
   
   /* Custom tier colors */
   --tier-high: oklch(0.7 0.18 145);
-  --tier-mid: oklch(0.8 0.16 85);
+  --tier-moderate: oklch(0.8 0.16 85);
+  --tier-low: oklch(0.78 0.12 70);
   --tier-disengaged: oklch(0.65 0.18 25);
   --tier-high-bg: oklch(0.25 0.06 145);
-  --tier-mid-bg: oklch(0.28 0.06 85);
+  --tier-moderate-bg: oklch(0.28 0.06 85);
+  --tier-low-bg: oklch(0.28 0.05 70);
   --tier-disengaged-bg: oklch(0.25 0.06 25);
 }
 
@@ -133,10 +137,12 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-tier-high: var(--tier-high);
-  --color-tier-mid: var(--tier-mid);
+  --color-tier-moderate: var(--tier-moderate);
+  --color-tier-low: var(--tier-low);
   --color-tier-disengaged: var(--tier-disengaged);
   --color-tier-high-bg: var(--tier-high-bg);
-  --color-tier-mid-bg: var(--tier-mid-bg);
+  --color-tier-moderate-bg: var(--tier-moderate-bg);
+  --color-tier-low-bg: var(--tier-low-bg);
   --color-tier-disengaged-bg: var(--tier-disengaged-bg);
 }
 

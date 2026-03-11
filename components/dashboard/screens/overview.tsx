@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { KpiCard } from "@/components/dashboard/kpi-card"
-import { TierBadge } from "@/components/dashboard/tier-badge"
+import { TierBadge, type TierLevel } from "@/components/dashboard/tier-badge"
 import { Skeleton } from "@/components/ui/skeleton"
 import {
   TrendingUp,
@@ -35,11 +35,12 @@ import {
 } from "@/lib/fetch-data"
 import type { OverviewData, RoomInfo, TransitionMatrix, StudentRecord } from "@/lib/types"
 
-const TIER_COLORS = {
+const TIER_COLORS: Record<string, string> = {
   high: "oklch(0.7 0.18 145)",
-  mid: "oklch(0.8 0.16 85)",
+  moderate: "oklch(0.8 0.16 85)",
+  low: "oklch(0.78 0.12 70)",
   disengaged: "oklch(0.65 0.18 25)",
-} as const
+}
 
 /* ── Skeleton placeholders ─────────────────────────────── */
 
@@ -132,21 +133,28 @@ export function Overview() {
 
   /* ── Derived data ── */
 
-  const totalTierLabels = overview
-    ? overview.tier_counts.high +
-      overview.tier_counts.mid +
-      (overview.tier_counts.disengaged ?? 0)
-    : 0
+  const tierCounts = overview?.tier_counts ?? {}
+  const tierOrder =
+    (Array.isArray(overview?.config?.TIER_NAMES)
+      ? (overview?.config?.TIER_NAMES as string[])
+      : ["disengaged", "low", "moderate", "high"]) ?? []
 
-  const tierPcts =
+  const totalTierLabels =
+    Object.values(tierCounts).reduce((sum, v) => sum + (v ?? 0), 0) ?? 0
+
+  const tierData =
     overview && totalTierLabels > 0
-      ? {
-          high: (overview.tier_counts.high / totalTierLabels) * 100,
-          mid: (overview.tier_counts.mid / totalTierLabels) * 100,
-          disengaged:
-            ((overview.tier_counts.disengaged ?? 0) / totalTierLabels) * 100,
-        }
-      : { high: 0, mid: 0, disengaged: 0 }
+      ? tierOrder.map((key) => {
+          const count = (tierCounts as Record<string, number | undefined>)[key] ?? 0
+          return {
+            key,
+            label: (key.charAt(0).toUpperCase() + key.slice(1)) as TierLevel,
+            count,
+            pct: (count / totalTierLabels) * 100,
+            color: TIER_COLORS[key] ?? "oklch(0.65 0.15 250)",
+          }
+        })
+      : []
 
   const predictionCount = students
     ? students.filter((s) => s.has_prediction).length
@@ -175,13 +183,6 @@ export function Overview() {
           return bins
         })()
       : []
-
-  const disPctThreshold = overview
-    ? Number(overview.config.DIS_PCT) * 100
-    : 15
-  const highPctThreshold = overview
-    ? (1 - Number(overview.config.HIGH_PCT)) * 100
-    : 30
 
   /* ── Render ── */
 
@@ -284,9 +285,12 @@ export function Overview() {
         ) : (
           <>
             <KpiCard
-              title="Mid Tier Dominance"
-              value={`${tierPcts.mid.toFixed(1)}%`}
-              subtitle="Model's main job: distinguishing the extremes"
+              title="Middle Tiers Dominance"
+              value={`${tierData
+                .filter((t) => t.key !== "high" && t.key !== "disengaged")
+                .reduce((sum, t) => sum + t.pct, 0)
+                .toFixed(1)}%`}
+              subtitle="Model's main job: separating extremes from the middle tiers"
               icon={Layers}
             />
             <KpiCard
@@ -321,69 +325,35 @@ export function Overview() {
               Engagement Tier Distribution
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              {totalTierLabels.toLocaleString()} course-level tier labels —
-              students can appear in multiple courses
+              {totalTierLabels.toLocaleString()} course-level tier labels — students
+              can appear in multiple courses
             </p>
 
             {/* Horizontal stacked bar */}
             <div className="w-full h-11 rounded-lg overflow-hidden flex text-[11px] font-bold">
-              <div
-                className="h-full flex items-center justify-center"
-                style={{
-                  width: `${tierPcts.high}%`,
-                  minWidth: tierPcts.high > 0 ? "4.5rem" : 0,
-                  backgroundColor: TIER_COLORS.high,
-                  color: "oklch(0.15 0.02 145)",
-                }}
-              >
-                {tierPcts.high.toFixed(1)}%
-              </div>
-              <div
-                className="h-full flex items-center justify-center"
-                style={{
-                  width: `${tierPcts.mid}%`,
-                  backgroundColor: TIER_COLORS.mid,
-                  color: "oklch(0.15 0.02 85)",
-                }}
-              >
-                Mid {tierPcts.mid.toFixed(1)}%
-              </div>
-              <div
-                className="h-full flex items-center justify-center"
-                style={{
-                  width: `${tierPcts.disengaged}%`,
-                  minWidth: tierPcts.disengaged > 0 ? "4.5rem" : 0,
-                  backgroundColor: TIER_COLORS.disengaged,
-                  color: "oklch(0.15 0.02 25)",
-                }}
-              >
-                {tierPcts.disengaged.toFixed(1)}%
-              </div>
+              {tierData.map((t) => (
+                <div
+                  key={t.key}
+                  className="h-full flex items-center justify-center"
+                  style={{
+                    width: `${t.pct}%`,
+                    minWidth: t.pct > 0 ? "3.5rem" : 0,
+                    backgroundColor: t.color,
+                    color: "oklch(0.15 0.02 250)",
+                  }}
+                >
+                  {t.label} {t.pct.toFixed(1)}%
+                </div>
+              ))}
             </div>
 
             {/* Legend with counts */}
             <div className="flex items-center gap-6 mt-4">
-              {[
-                {
-                  key: "high" as const,
-                  label: "High",
-                  count: overview?.tier_counts.high ?? 0,
-                },
-                {
-                  key: "mid" as const,
-                  label: "Mid",
-                  count: overview?.tier_counts.mid ?? 0,
-                },
-                {
-                  key: "disengaged" as const,
-                  label: "Disengaged",
-                  count: overview?.tier_counts.disengaged ?? 0,
-                },
-              ].map(({ key, label, count }) => (
+              {tierData.map(({ key, label, count, color }) => (
                 <div key={key} className="flex items-center gap-2">
                   <span
                     className="inline-block w-3 h-3 rounded-sm"
-                    style={{ backgroundColor: TIER_COLORS[key] }}
+                    style={{ backgroundColor: color }}
                   />
                   <span className="text-sm text-foreground">
                     {label}{" "}
@@ -407,29 +377,21 @@ export function Overview() {
               Tier Definitions
             </h3>
             <div className="space-y-3">
-              <div className="p-3 rounded-lg bg-secondary/30 border border-border/50">
-                <TierBadge tier="High" size="sm" />
-                <p className="text-xs text-muted-foreground mt-1.5">
-                  Top {highPctThreshold.toFixed(0)}% most active in their room
-                  (attend_frac, code submissions, quiz, etc.)
-                </p>
-              </div>
-
-              <div className="p-3 rounded-lg bg-secondary/30 border border-border/50">
-                <TierBadge tier="Mid" size="sm" />
-                <p className="text-xs text-muted-foreground mt-1.5">
-                  Everyone between the {highPctThreshold.toFixed(0)}th and{" "}
-                  {disPctThreshold.toFixed(0)}th percentile
-                </p>
-              </div>
-
-              <div className="p-3 rounded-lg bg-secondary/30 border border-border/50">
-                <TierBadge tier="Disengaged" size="sm" />
-                <p className="text-xs text-muted-foreground mt-1.5">
-                  Bottom {disPctThreshold.toFixed(0)}% least active in their
-                  room
-                </p>
-              </div>
+              {tierData.map((t) => (
+                <div
+                  key={t.key}
+                  className="p-3 rounded-lg bg-secondary/30 border border-border/50"
+                >
+                  <TierBadge tier={t.label} size="sm" />
+                  <p className="text-xs text-muted-foreground mt-1.5">
+                    {t.label === "High"
+                      ? "Highest engagement group in their room (attendance, code, quiz, etc.)"
+                      : t.label === "Disengaged"
+                        ? "Lowest engagement group — consistently low activity relative to peers"
+                        : "Middle engagement group based on composite score across early activity features"}
+                  </p>
+                </div>
+              ))}
 
               <div className="p-3 rounded-lg border border-dashed border-border/50">
                 <p className="text-xs text-muted-foreground">
@@ -459,11 +421,15 @@ export function Overview() {
               </span>
             </h3>
             <div className="grid grid-cols-5 gap-3">
-              {topRooms.map((room) => {
-                const high = room.tier_counts?.high ?? 0
-                const mid = room.tier_counts?.mid ?? 0
-                const disengaged = room.tier_counts?.disengaged ?? 0
-                const total = high + mid + disengaged
+                {topRooms.map((room) => {
+                const roomTierCounts = room.tier_counts ?? {}
+                const high = (roomTierCounts as Record<string, number | undefined>).high ?? 0
+                const low = (roomTierCounts as Record<string, number | undefined>).low ?? 0
+                const moderate =
+                  (roomTierCounts as Record<string, number | undefined>).moderate ?? 0
+                const disengaged =
+                  (roomTierCounts as Record<string, number | undefined>).disengaged ?? 0
+                const total = high + low + moderate + disengaged
                 const highRatio = total > 0 ? high / total : 0
 
                 return (
@@ -491,10 +457,9 @@ export function Overview() {
                     </p>
                     <div className="flex gap-1 mt-2 flex-wrap">
                       {high > 0 && <TierBadge tier="High" size="sm" />}
-                      {mid > 0 && <TierBadge tier="Mid" size="sm" />}
-                      {disengaged > 0 && (
-                        <TierBadge tier="Disengaged" size="sm" />
-                      )}
+                      {moderate > 0 && <TierBadge tier="Moderate" size="sm" />}
+                      {low > 0 && <TierBadge tier="Low" size="sm" />}
+                      {disengaged > 0 && <TierBadge tier="Disengaged" size="sm" />}
                     </div>
                     <div className="mt-2 w-full h-1.5 rounded-full bg-secondary overflow-hidden flex">
                       {high > 0 && (
@@ -506,12 +471,21 @@ export function Overview() {
                           }}
                         />
                       )}
-                      {mid > 0 && (
+                      {moderate > 0 && (
                         <div
                           className="h-full"
                           style={{
-                            width: `${(mid / total) * 100}%`,
-                            backgroundColor: TIER_COLORS.mid,
+                            width: `${(moderate / total) * 100}%`,
+                            backgroundColor: TIER_COLORS.moderate,
+                          }}
+                        />
+                      )}
+                      {low > 0 && (
+                        <div
+                          className="h-full"
+                          style={{
+                            width: `${(low / total) * 100}%`,
+                            backgroundColor: TIER_COLORS.low,
                           }}
                         />
                       )}

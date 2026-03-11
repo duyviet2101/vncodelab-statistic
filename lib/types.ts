@@ -1,3 +1,5 @@
+export type TierCounts = Record<string, number>
+
 export interface OverviewData {
   total_events_raw: number
   total_students_raw: number
@@ -7,11 +9,8 @@ export interface OverviewData {
   cohort_students: number
   cohort_rooms: number
   cohort_courses: number
-  tier_counts: {
-    mid: number
-    high: number
-    disengaged: number
-  }
+  tier_counts: TierCounts
+  predicted_tier_counts?: TierCounts
   n_features: number
   best_model: string
   best_accuracy: number
@@ -26,7 +25,7 @@ export interface RoomInfo {
   room_id: string
   n_students: number
   n_sessions_avg: number
-  tier_counts: Partial<Record<"mid" | "high" | "disengaged", number>>
+  tier_counts: Partial<TierCounts>
 }
 
 export interface StudentRecord {
@@ -57,7 +56,7 @@ export interface SessionActivity {
 }
 
 export type SessionActivityByTier = Record<
-  "high" | "mid" | "disengaged",
+  string,
   SessionActivity[]
 >
 

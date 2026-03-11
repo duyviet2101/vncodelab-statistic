@@ -1,7 +1,9 @@
 import { cn } from "@/lib/utils"
 
+export type TierLevel = "Disengaged" | "Low" | "Moderate" | "High"
+
 interface TierBadgeProps {
-  tier: "High" | "Mid" | "Disengaged"
+  tier: TierLevel
   size?: "sm" | "md" | "lg"
 }
 
@@ -12,9 +14,10 @@ export function TierBadge({ tier, size = "md" }: TierBadgeProps) {
     lg: "px-3 py-1.5 text-sm",
   }
 
-  const tierClasses = {
+  const tierClasses: Record<TierLevel, string> = {
     High: "bg-tier-high-bg text-tier-high border-tier-high/30",
-    Mid: "bg-tier-mid-bg text-tier-mid border-tier-mid/30",
+    Moderate: "bg-tier-moderate-bg text-tier-moderate border-tier-moderate/30",
+    Low: "bg-tier-low-bg text-tier-low border-tier-low/30",
     Disengaged: "bg-tier-disengaged-bg text-tier-disengaged border-tier-disengaged/30",
   }
 

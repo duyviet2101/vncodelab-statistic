@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useMemo } from "react"
 import { Card } from "@/components/ui/card"
-import { TierBadge } from "@/components/dashboard/tier-badge"
+import { TierBadge, type TierLevel } from "@/components/dashboard/tier-badge"
 import { Progress } from "@/components/ui/progress"
 import { Skeleton } from "@/components/ui/skeleton"
 import {
@@ -54,13 +54,14 @@ function getActivityColor(name: string): string {
   return ACTIVITY_COLORS[key] ?? "oklch(0.6 0.1 200)"
 }
 
-function capitalizeTier(tier: string): "High" | "Mid" | "Disengaged" {
-  const map: Record<string, "High" | "Mid" | "Disengaged"> = {
+function capitalizeTier(tier: string): TierLevel {
+  const map: Record<string, TierLevel> = {
     high: "High",
-    mid: "Mid",
+    moderate: "Moderate",
+    low: "Low",
     disengaged: "Disengaged",
   }
-  return map[tier.toLowerCase()] ?? "Mid"
+  return map[tier.toLowerCase()] ?? "Moderate"
 }
 
 interface StudentDetailProps {

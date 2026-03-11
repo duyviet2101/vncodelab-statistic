@@ -163,7 +163,7 @@ export function ModelMetrics() {
   const getHeatmapColor = (value: number, max: number) => {
     const intensity = value / max
     if (intensity > 0.7) return "bg-tier-high/80 text-tier-high-bg"
-    if (intensity > 0.3) return "bg-tier-mid/60 text-tier-mid-bg"
+    if (intensity > 0.3) return "bg-tier-moderate/60 text-tier-moderate-bg"
     return "bg-tier-disengaged/40 text-tier-disengaged-bg"
   }
 
