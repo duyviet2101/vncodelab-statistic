@@ -21,6 +21,7 @@ import {
   Users,
 } from "lucide-react"
 import { fetchStudents, fetchThresholdAnalysis, fetchRooms } from "@/lib/fetch-data"
+import { hasPrediction } from "@/lib/utils"
 import type { StudentRecord, ThresholdPoint, RoomInfo } from "@/lib/types"
 import {
   LineChart,
@@ -73,13 +74,15 @@ export function AtRiskStudents() {
 
   const totalStudents = students.length
   const studentsWithPredictions = useMemo(
-    () => students.filter((s) => s.has_prediction),
+    () => students.filter((s) => hasPrediction(s)),
     [students],
   )
   const studentsWithoutPredictions = totalStudents - studentsWithPredictions.length
   const coveragePct =
     totalStudents > 0
-      ? ((studentsWithPredictions.length / totalStudents) * 100).toFixed(1)
+      ? Number(
+          (studentsWithPredictions.length / totalStudents) * 100,
+        ).toFixed(1)
       : "0"
 
   const currentMetrics = useMemo(() => {
@@ -100,7 +103,7 @@ export function AtRiskStudents() {
     () =>
       students
         .filter((s) => {
-          if (!s.has_prediction) return false
+          if (!hasPrediction(s)) return false
           if (s.p_disengaged === null) return false
           const meetsThreshold = s.p_disengaged >= threshold[0]
           const meetsRoom =
@@ -116,7 +119,7 @@ export function AtRiskStudents() {
       thresholdData
         .filter((t) => t.threshold >= 0.3 && t.threshold <= 0.7)
         .map((t) => ({
-          threshold: `${(t.threshold * 100).toFixed(0)}%`,
+          threshold: `${Number((t.threshold ?? 0) * 100).toFixed(0)}%`,
           thresholdRaw: t.threshold,
           Recall: t.recall,
           Precision: t.precision,
@@ -266,7 +269,7 @@ export function AtRiskStudents() {
                   P(Disengaged) Threshold
                 </label>
                 <span className="text-sm font-mono font-medium text-primary">
-                  {">="} {(threshold[0] * 100).toFixed(0)}%
+                  {">="} {Number((threshold[0] ?? 0) * 100).toFixed(0)}%
                 </span>
               </div>
               <Slider
@@ -286,19 +289,19 @@ export function AtRiskStudents() {
                   <span className="text-xs text-muted-foreground">
                     Recall:{" "}
                     <span className="font-mono font-medium text-foreground">
-                      {(currentMetrics.recall * 100).toFixed(0)}%
+                      {Number((currentMetrics.recall ?? 0) * 100).toFixed(0)}%
                     </span>
                   </span>
                   <span className="text-xs text-muted-foreground">
                     Precision:{" "}
                     <span className="font-mono font-medium text-foreground">
-                      {(currentMetrics.precision * 100).toFixed(0)}%
+                      {Number((currentMetrics.precision ?? 0) * 100).toFixed(0)}%
                     </span>
                   </span>
                   <span className="text-xs text-muted-foreground">
                     F1:{" "}
                     <span className="font-mono font-medium text-foreground">
-                      {currentMetrics.f1.toFixed(2)}
+                      {Number(currentMetrics.f1 ?? 0).toFixed(2)}
                     </span>
                   </span>
                 </div>
@@ -335,7 +338,8 @@ export function AtRiskStudents() {
           <span className="font-medium text-foreground">
             {filteredStudents.length}
           </span>{" "}
-          students with P(Disengaged) {">="} {(threshold[0] * 100).toFixed(0)}%
+          students with P(Disengaged) {">="}{" "}
+          {Number((threshold[0] ?? 0) * 100).toFixed(0)}%
         </span>
       </div>
 
@@ -410,7 +414,7 @@ export function AtRiskStudents() {
                             color: student.p_disengaged > 0.52 ? "#fff" : "#1a1a1a",
                           }}
                         >
-                          {(student.p_disengaged * 100).toFixed(1)}%
+                          {Number(student.p_disengaged * 100).toFixed(1)}%
                         </span>
                       ) : (
                         <span className="text-sm text-muted-foreground">N/A</span>
@@ -418,14 +422,14 @@ export function AtRiskStudents() {
                     </td>
                     <td className="py-3 px-4 text-right text-sm font-mono text-muted-foreground">
                       {student.p_high !== null
-                        ? (student.p_high * 100).toFixed(1) + "%"
+                        ? Number(student.p_high * 100).toFixed(1) + "%"
                         : "N/A"}
                     </td>
                     <td className="py-3 px-4 text-right text-sm text-muted-foreground">
                       {student.n_sessions_early}
                     </td>
                     <td className="py-3 px-4 text-right text-sm text-muted-foreground">
-                      {(student.attend_frac_early * 100).toFixed(0)}%
+                      {Number((student.attend_frac_early ?? 0) * 100).toFixed(0)}%
                     </td>
                   </tr>
                 ))
@@ -441,7 +445,7 @@ export function AtRiskStudents() {
                       </p>
                       <p className="text-xs text-muted-foreground">
                         No students have P(Disengaged) above{" "}
-                        {(threshold[0] * 100).toFixed(0)}%. Try lowering the
+                        {Number((threshold[0] ?? 0) * 100).toFixed(0)}%. Try lowering the
                         threshold — most scores cluster around 50%.
                       </p>
                     </div>
@@ -482,17 +486,19 @@ export function AtRiskStudents() {
               <YAxis
                 domain={[0, 1]}
                 tick={{ fontSize: 12 }}
-                tickFormatter={(v: number) => `${(v * 100).toFixed(0)}%`}
+                tickFormatter={(v: number) =>
+                  `${Number((v ?? 0) * 100).toFixed(0)}%`
+                }
               />
               <Tooltip
                 formatter={(value: number, name: string) => [
-                  `${(value * 100).toFixed(1)}%`,
+                  `${Number((value ?? 0) * 100).toFixed(1)}%`,
                   name,
                 ]}
               />
               <Legend />
               <ReferenceLine
-                x={`${(threshold[0] * 100).toFixed(0)}%`}
+                x={`${Number((threshold[0] ?? 0) * 100).toFixed(0)}%`}
                 stroke="hsl(var(--primary))"
                 strokeDasharray="4 4"
                 strokeWidth={2}

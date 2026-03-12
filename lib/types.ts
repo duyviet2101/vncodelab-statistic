@@ -45,7 +45,8 @@ export interface StudentRecord {
   n_help_early: number
   n_sessions_full: number
   attend_frac_early: number
-  has_prediction: boolean
+  /** Optional: if missing, UI derives from predicted_tier / p_high / p_disengaged */
+  has_prediction?: boolean
 }
 
 export interface SessionActivity {

@@ -18,6 +18,7 @@ import {
   Legend,
 } from "recharts"
 import { fetchOverview, fetchSessionActivity, fetchStudents } from "@/lib/fetch-data"
+import { hasPrediction } from "@/lib/utils"
 import type { OverviewData, SessionActivityByTier, StudentRecord } from "@/lib/types"
 
 const TIER_COLORS: Record<string, string> = {
@@ -279,7 +280,7 @@ export function ClassEngagement() {
   )
 
   const predictedStudents = useMemo(
-    () => students.filter((s) => s.has_prediction),
+    () => students.filter((s) => hasPrediction(s)),
     [students],
   )
 

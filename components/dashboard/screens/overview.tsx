@@ -33,6 +33,7 @@ import {
   fetchTransitionMatrix,
   fetchStudents,
 } from "@/lib/fetch-data"
+import { hasPrediction } from "@/lib/utils"
 import type { OverviewData, RoomInfo, TransitionMatrix, StudentRecord } from "@/lib/types"
 
 const TIER_COLORS: Record<string, string> = {
@@ -157,7 +158,7 @@ export function Overview() {
       : []
 
   const predictionCount = students
-    ? students.filter((s) => s.has_prediction).length
+    ? students.filter((s) => hasPrediction(s)).length
     : 0
 
   const labelStability = transition ? transition.stability : 0

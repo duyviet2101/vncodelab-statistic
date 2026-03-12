@@ -144,8 +144,8 @@ export function ModelMetrics() {
 
   const bestModel = overview.best_model
   const bestModelData = models.find((m) => m.model === bestModel) ?? models[0]
-  const trainSize = bestModelData.train_size
-  const testSize = bestModelData.test_size
+  const trainSize = bestModelData?.train_size ?? 0
+  const testSize = bestModelData?.test_size ?? 0
 
   const trainingDate = overview.train_timestamp
     ? new Date(overview.train_timestamp).toLocaleDateString("en-US", {
@@ -264,8 +264,8 @@ export function ModelMetrics() {
             <div>
               <p className="text-xs text-muted-foreground">Accuracy / AUC</p>
               <p className="text-sm font-medium text-foreground">
-                {(bestModelData.accuracy * 100).toFixed(1)}% /{" "}
-                {bestModelData.auc.toFixed(3)}
+                {Number((bestModelData?.accuracy ?? 0) * 100).toFixed(1)}% /{" "}
+                {Number(bestModelData?.auc ?? 0).toFixed(3)}
               </p>
             </div>
           </div>
@@ -283,9 +283,9 @@ export function ModelMetrics() {
         <div className="mt-4 flex items-start gap-2 rounded-md bg-muted/50 p-3">
           <Info className="w-4 h-4 text-muted-foreground shrink-0 mt-0.5" />
           <p className="text-xs text-muted-foreground">
-            Accuracy of {(bestModelData.accuracy * 100).toFixed(1)}% is modest
-            for binary classification (50% = random). AUC of{" "}
-            {bestModelData.auc.toFixed(3)} indicates some discriminative ability
+            Accuracy of {Number((bestModelData?.accuracy ?? 0) * 100).toFixed(1)}% is
+            modest for binary classification (50% = random). AUC of{" "}
+            {Number(bestModelData?.auc ?? 0).toFixed(3)} indicates some discriminative ability
             but significant room for improvement with more training data.
           </p>
         </div>
@@ -349,19 +349,19 @@ export function ModelMetrics() {
                       <StatusBadge status={status} />
                     </td>
                     <td className="py-3 px-4 text-sm text-foreground">
-                      {(m.accuracy * 100).toFixed(1)}%
+                      {Number((m.accuracy ?? 0) * 100).toFixed(1)}%
                     </td>
                     <td className="py-3 px-4 text-sm text-foreground">
-                      {m.macro_f1.toFixed(3)}
+                      {Number(m.macro_f1 ?? 0).toFixed(3)}
                     </td>
                     <td className="py-3 px-4 text-sm text-foreground">
-                      {m.auc.toFixed(3)}
+                      {Number(m.auc ?? 0).toFixed(3)}
                     </td>
                     <td className="py-3 px-4 text-sm text-foreground">
-                      {m.precision_macro.toFixed(3)}
+                      {Number(m.precision_macro ?? 0).toFixed(3)}
                     </td>
                     <td className="py-3 px-4 text-sm text-foreground">
-                      {m.recall_macro.toFixed(3)}
+                      {Number(m.recall_macro ?? 0).toFixed(3)}
                     </td>
                     <td className="py-3 px-4 text-sm text-muted-foreground">
                       {m.train_size} / {m.test_size}
@@ -488,11 +488,11 @@ export function ModelMetrics() {
                   fontSize: "12px",
                 }}
                 formatter={(value: number, name: string) => [
-                  value.toFixed(3),
+                  Number(value ?? 0).toFixed(3),
                   name,
                 ]}
                 labelFormatter={(label: number) =>
-                  `FPR: ${Number(label).toFixed(3)}`
+                  `FPR: ${Number(label ?? 0).toFixed(3)}`
                 }
               />
               <Legend
@@ -516,7 +516,9 @@ export function ModelMetrics() {
                     y: curve.tpr[i],
                   }))}
                   dataKey="y"
-                  name={`${formatModelName(modelKey)} (AUC=${curve.auc.toFixed(3)})`}
+                  name={`${formatModelName(modelKey)} (AUC=${Number(
+                    curve.auc ?? 0,
+                  ).toFixed(3)})`}
                   stroke={MODEL_COLORS[modelKey] ?? "#888"}
                   strokeWidth={2}
                   dot={false}
@@ -556,8 +558,8 @@ export function ModelMetrics() {
             </thead>
             <tbody>
               {tierMetrics.map((metric) => {
-                const precPct = (metric.precision * 100).toFixed(1)
-                const recPct = (metric.recall * 100).toFixed(1)
+                const precPct = Number((metric.precision ?? 0) * 100).toFixed(1)
+                const recPct = Number((metric.recall ?? 0) * 100).toFixed(1)
                 const interpretation =
                   metric.tier === "Disengaged" && metric.precision < 0.3
                     ? `Precision is only ${precPct}% — model flags many false positives for this tier`
@@ -638,7 +640,7 @@ export function ModelMetrics() {
                       </dt>
                       <dd className="font-mono font-medium text-foreground">
                         {typeof value === "number" && value % 1 !== 0
-                          ? value.toFixed(4)
+                          ? Number(value).toFixed(4)
                           : String(value)}
                       </dd>
                     </div>
